@@ -60,8 +60,9 @@ foreach ($ed in $manifest.editors) {
     Start-Process $installer -ArgumentList ($args -split '\s+') -Wait
 
     # Locate the installed editor binary by its known name (payloadExe).
+    # DiGiCo editors install to C:\<model>\ (NOT Program Files), so scan the C:\ root too.
     $needle = if ($ed.payloadExe) { $ed.payloadExe } else { "*.exe" }
-    $exe = Get-ChildItem "C:\Program Files","C:\Program Files (x86)" -Recurse -Filter $needle -ErrorAction SilentlyContinue |
+    $exe = Get-ChildItem "C:\","C:\Program Files","C:\Program Files (x86)" -Depth 3 -Filter $needle -File -ErrorAction SilentlyContinue |
            Select-Object -First 1 -ExpandProperty FullName
 
     if (-not $exe) {
