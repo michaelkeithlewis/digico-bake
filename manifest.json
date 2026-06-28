@@ -1,0 +1,20 @@
+{
+  "_comment": "Single source of truth for WHICH DiGiCo editors get baked into the image and which can launch. installerUrl points DIRECTLY at the public digico.biz V2242 zips (no Cloudflare on that host, the AWS Image Builder fetches them itself). Each zip contains an NSIS .exe (silent /S) plus 2 PDFs. payloadExe is the editor binary the installer drops, used to register the AppStream app. Default launches on a bare URL; any other via ?app=<key>. NOTE: q112 and q7 ship the SAME binary (SD7Q.exe).",
+  "default": "q7",
+  "archiveType": "zip",
+  "editors": [
+    { "key": "q7",    "appId": "DiGiCoQuantum7",   "displayName": "DiGiCo Quantum 7 / 112 Offline", "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_Quantum7_V2242_Offline_Installer.zip", "silentArgs": "/S", "payloadExe": "SD7Q.exe" },
+    { "key": "q5",    "appId": "DiGiCoQuantum5",   "displayName": "DiGiCo Quantum 5 Offline",       "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_Quantum5_V2242_Offline_Installer.zip", "silentArgs": "/S", "payloadExe": "Quantum5.exe" },
+    { "key": "q852",  "appId": "DiGiCoQuantum852", "displayName": "DiGiCo Quantum 852 Offline",     "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_Quantum8_V2242_Offline_Installer.zip", "silentArgs": "/S", "payloadExe": "Quantum8.exe" },
+    { "key": "q338",  "appId": "DiGiCoQuantum338", "displayName": "DiGiCo Quantum 326 & 338 Offline", "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_Quantum3_V2242_Offline_Installer.zip", "silentArgs": "/S", "payloadExe": "Quantum3.exe" },
+    { "key": "q225",  "appId": "DiGiCoQuantum225", "displayName": "DiGiCo Quantum 225 Offline",     "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_Quantum2_V2242_Offline_Installer.zip", "silentArgs": "/S", "payloadExe": "Quantum2.exe" },
+    { "key": "sd5",   "appId": "DiGiCoSD5",        "displayName": "DiGiCo SD5 Offline",             "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_SD5_V2242_Offline_Installer.zip",      "silentArgs": "/S", "payloadExe": "SD5.exe" },
+    { "key": "sd5cs", "appId": "DiGiCoSD5CS",      "displayName": "DiGiCo SD5 CS Offline",          "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_SD5CS_V2242_Offline_Installer.zip",   "silentArgs": "/S", "payloadExe": "SD5CS.exe" },
+    { "key": "sd7",   "appId": "DiGiCoSD7",        "displayName": "DiGiCo SD7 Offline",             "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_SD7_V2242_Offline_Installer.zip",      "silentArgs": "/S", "payloadExe": "SD7.exe" },
+    { "key": "sd8",   "appId": "DiGiCoSD8",        "displayName": "DiGiCo SD8 Offline",             "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_SD8_V2242_Offline_Installer.zip",      "silentArgs": "/S", "payloadExe": "SD8.exe" },
+    { "key": "sd9",   "appId": "DiGiCoSD9",        "displayName": "DiGiCo SD9 Offline",             "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_SD9_V2242_Offline_Installer.zip",      "silentArgs": "/S", "payloadExe": "SD9.exe" },
+    { "key": "sd10",  "appId": "DiGiCoSD10",       "displayName": "DiGiCo SD10 Offline",            "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_SD10_V2242_Offline_Installer.zip",     "silentArgs": "/S", "payloadExe": "SD10.exe" },
+    { "key": "sd11",  "appId": "DiGiCoSD11",       "displayName": "DiGiCo SD11 Offline",            "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_SD11_V2242_Offline_Installer.zip",     "silentArgs": "/S", "payloadExe": "SD11.exe" },
+    { "key": "sd12",  "appId": "DiGiCoSD12",       "displayName": "DiGiCo SD12 Offline",            "installerUrl": "https://digico.biz/wp-content/uploads/2026/06/DiGiCo_SD12_V2242_Offline_Installer.zip",     "silentArgs": "/S", "payloadExe": "SD12.exe" }
+  ]
+}
